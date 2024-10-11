@@ -53,7 +53,7 @@ export default function App() {
 
   const calcTotal = () => {
     let total = 150;
-    total = total + (data.webPages - 1) * 125;
+    total = total + (data.webPages - 1) * 110;
     total = (data.webFeat.cms ? total + 100 : total);
     total = (data.webFeat.eCom ? total + 300 : total);
     total = (data.webFeat.anim ? total + 100 : total);
@@ -64,7 +64,7 @@ export default function App() {
         total = total * 1.25;
         break;
       case 'shopify':
-        total = total * 1.15;
+        total = total * 1.10;
         break;
     }
     switch(data.webSpeed) {
