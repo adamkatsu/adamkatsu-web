@@ -50,14 +50,12 @@ export default function App() {
   }
   let duration = calcDuration()
 
-
   const calcTotal = () => {
     let total = 150;
     total = total + (data.webPages - 1) * 110;
     total = (data.webFeat.cms ? total + 100 : total);
     total = (data.webFeat.eCom ? total + 300 : total);
     total = (data.webFeat.anim ? total + 100 : total);
-
 
     switch(data.webPlatform) {
       case 'react':
@@ -82,13 +80,10 @@ export default function App() {
   }
   let totalPrice = calcTotal()
 
-  console.log(data)
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log('Form Data:', data);
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log('Form Data:', data);
+  // };
 
   const updateFormData = (updatedData) => {
     setData((prevState) => ({
@@ -100,7 +95,7 @@ export default function App() {
   return (
     <section className='section price-calculator'>
       <div className="container">
-        <form onSubmit={handleSubmit} className='price-calculator-cont'>
+        <form className='price-calculator-cont'>
           <Form data={data} updateFormData={updateFormData}/>
           <Price data={data} duration={duration} totalPrice={totalPrice}/>
         </form>
