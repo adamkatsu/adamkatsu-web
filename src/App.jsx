@@ -22,6 +22,9 @@ export default function App() {
     duration = duration + data.webPages / 3;
     duration = duration + data.webPages / 3;
     duration = duration + data.webPages / 2;
+    duration = (data.webFeat.cms ? duration + 2 : duration);
+    duration = (data.webFeat.eCom ? duration + 4 : duration);
+    duration = (data.webFeat.anim ? duration * 1.55 : duration);
 
     switch(data.webPlatform) {
       case 'react':
@@ -78,9 +81,6 @@ export default function App() {
     )
   }
   let totalPrice = calcTotal()
-
-
-
 
   console.log(data)
 

@@ -23,7 +23,7 @@ export default function Price({data ,duration, totalPrice}) {
           </li>
         </ul>
 
-        <button className="btn-primary" type="submit">Submit Proposal</button>
+        {/* <button className="btn-primary" type="submit">Submit Proposal</button> */}
       </div>
     </div>
   )

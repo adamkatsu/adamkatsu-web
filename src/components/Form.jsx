@@ -150,7 +150,7 @@ export default function Form({ data, updateFormData }) {
             checked={data.webFeat.anim}
             onChange={handleCheckboxChange}
           />
-          Custom Animation
+          Advanced Animation
         </label>
         </div>
       </fieldset>

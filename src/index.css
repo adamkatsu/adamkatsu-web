@@ -29,7 +29,7 @@
 .h2 {
   font-size: 32px;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 110%;
   color: var(--color-blue);
 }
 .h3 {
@@ -72,7 +72,7 @@ section {
 }
 .pricing-total {
   position: sticky;
-  top: 48 px;
+  top: 48px;
 }
 .pricing-form {
   display: flex;
@@ -153,7 +153,13 @@ section {
   padding: 1rem 0;
   border-bottom: 1px solid var(--color-blue);
 }
-
+.price-details-item:first-child {
+  padding-top: 0;
+}
+.price-details-item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
 
 
 input[type="range"] {
@@ -186,4 +192,49 @@ input[type="range"]::-moz-range-track {
   background: var(--color-blue); /* Track color */
   height: 8px;
   border-radius: 5px;
+}
+
+@media(max-width: 768px) {
+  section{
+    padding: 2rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .pricing-card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .pricing-options-wrapper {
+    gap: .75rem;
+  }
+  .pricing-options-wrapper label {
+    width: 100%;
+  }
+  .txt-price-total {
+    font-size: 3rem;
+  }
+
+}
+@media(max-width: 680px) {
+  .price-calculator-cont {
+    flex-direction: column;
+    border: 1rem;
+  }
+  .price-total {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .pricing-total {
+    top: auto;
+    bottom: 24px;
+  }
+  .pricing-total .pricing-card {
+    box-shadow: 0px 64px var(--color-blue);
+    border: 1px solid var(--color-blue);
+    padding-top: 1rem;
+  }
+  .price-details-item {
+    padding: .5rem 0;
+  }
 }
