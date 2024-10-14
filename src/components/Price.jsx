@@ -5,7 +5,7 @@ export default function Price({data ,duration, totalPrice}) {
     <div className="pricing pricing-total">
       <div className="pricing-card">
         <div className="price-total">
-          <span className="uppercase">Total (USD)</span>
+          <span className="txt-total-title uppercase">Total (USD)</span>
           <span className="txt-price-total">${totalPrice}</span>
         </div>
         <ul className="price-details">

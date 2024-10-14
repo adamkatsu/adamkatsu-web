@@ -130,7 +130,7 @@ export default function Form({ data, updateFormData }) {
             checked={data.webFeat.cms}
             onChange={handleCheckboxChange}
           />
-          CMS
+          CMS <span className="txt-small">(for Webflow and Wordpress)</span>
         </label>
         
         {/* <label>
