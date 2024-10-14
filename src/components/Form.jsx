@@ -2,9 +2,6 @@ import { useState } from "react";
 
 export default function Form({ data, updateFormData }) {
 
-  // const [formData, setFormData] = useState(data);
-  // console.log(formData)
-
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
     updateFormData({
@@ -70,6 +67,17 @@ export default function Form({ data, updateFormData }) {
             <input
               type="radio"
               name="webPlatform"
+              value="squarespace"
+              checked={data.webPlatform === 'squarespace'}
+              onChange={handlePlatformChange}
+            />
+            Squarespace
+          </label>
+          
+          <label>
+            <input
+              type="radio"
+              name="webPlatform"
               value="shopify"
               checked={data.webPlatform === 'shopify'}
               onChange={handlePlatformChange}
@@ -88,16 +96,6 @@ export default function Form({ data, updateFormData }) {
             ReactJs
           </label>
 
-          <label>
-            <input
-              type="radio"
-              name="webPlatform"
-              value="squarespace"
-              checked={data.webPlatform === 'squarespace'}
-              onChange={handlePlatformChange}
-            />
-            Squarespace
-          </label>
         </div>
       </fieldset>
 
@@ -126,8 +124,8 @@ export default function Form({ data, updateFormData }) {
         <label>
           <input
             type="checkbox"
-            name="cms"
-            checked={data.webFeat.cms}
+            name="featCms"
+            checked={data.webFeat.featCms}
             onChange={handleCheckboxChange}
           />
           CMS <span className="txt-small">(for Webflow and Wordpress)</span>
@@ -146,8 +144,8 @@ export default function Form({ data, updateFormData }) {
         <label>
           <input
             type="checkbox"
-            name="anim"
-            checked={data.webFeat.anim}
+            name="featAnim"
+            checked={data.webFeat.featAnim}
             onChange={handleCheckboxChange}
           />
           Advanced Animation
