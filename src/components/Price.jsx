@@ -19,7 +19,7 @@ export default function Price({data ,duration, totalPrice}) {
           </li>
           <li className="price-details-item">
             <span>Duration:</span>
-            <span>{duration} days</span>
+            <span>{duration} Business Days</span>
           </li>
         </ul>
 

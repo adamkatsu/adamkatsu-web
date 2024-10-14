@@ -6,7 +6,7 @@ export default function App() {
   const [data, setData] = useState(
     {
       webFeat: {
-        cms: false,
+        // cms: false,
         eCom: false,
         anim: false,
       },
@@ -23,7 +23,7 @@ export default function App() {
     duration = duration + data.webPages / 3;
     duration = duration + data.webPages / 2;
     duration = (data.webFeat.cms ? duration + 2 : duration);
-    duration = (data.webFeat.eCom ? duration + 4 : duration);
+    // duration = (data.webFeat.eCom ? duration + 4 : duration);
     duration = (data.webFeat.anim ? duration * 1.55 : duration);
 
     switch(data.webPlatform) {
@@ -54,7 +54,7 @@ export default function App() {
     let total = 150;
     total = total + (data.webPages - 1) * 110;
     total = (data.webFeat.cms ? total + 100 : total);
-    total = (data.webFeat.eCom ? total + 300 : total);
+    // total = (data.webFeat.eCom ? total + 300 : total);
     total = (data.webFeat.anim ? total + 100 : total);
 
     switch(data.webPlatform) {

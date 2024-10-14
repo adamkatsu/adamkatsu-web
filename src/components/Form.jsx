@@ -133,7 +133,7 @@ export default function Form({ data, updateFormData }) {
           CMS
         </label>
         
-        <label>
+        {/* <label>
           <input
             type="checkbox"
             name="eCom"
@@ -141,7 +141,7 @@ export default function Form({ data, updateFormData }) {
             onChange={handleCheckboxChange}
           />
           E-Commerce
-        </label>
+        </label> */}
         
         <label>
           <input
